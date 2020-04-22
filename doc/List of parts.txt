@@ -1,0 +1,8 @@
+List of model parts
+==================
+- ThumbBase 	x1
+- ThumbTip	x1
+- FingerBottom	x4
+- FingerMiddle	x4
+- FingerTip	x4
+- Palm		x1
