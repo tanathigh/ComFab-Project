@@ -14,15 +14,12 @@ module cyborgbeastpalm()
 {
 	difference()
 		{
-		scale([xScaleFactor,yScaleFactor,zScaleFactor])
-		{
-			difference()
+            difference()
 			{
 			cyborgbeast07palm();
 			
 			for(i=[-3,-1,1,3]) translate([i*7,28,0]) 
 				{
-				
 				translate([0,4.5,0]) {
 					cube([knuckleW + knucklePadding,10,21.6], center=true);
 					rotate([-45,0,0]) cube([knuckleW+knucklePadding,14,21.6], center=true);
@@ -33,10 +30,14 @@ module cyborgbeastpalm()
 			
 			translate([0,0,-100/2]) cube(100, center=true);
 			}
-		}
-		translate([0,-27*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
+		
+        translate([24,-8,10]) rotate([0,90,0]) cylinder(h=20, r=7);
+        
         
 		}
+        
+   //  translate([20,-8,10]) rotate([0,90,0]) cylinder(h=20, r=7);
+   // translate([20,-10,40]) rotate([0,90,0]) cube([50,10,40]);
 }	
 
 
