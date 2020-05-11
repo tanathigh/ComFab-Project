@@ -1,21 +1,27 @@
 module palm()
 {
-	difference()
-		{
+    difference(){
+        difference()
+        {
             difference()
-			{
-			palmbody();
-			for(i=[-3,-1,1,3]) translate([i*7,28,0]) 
-				{
-				translate([0,4.5,0]) {
-					cube([10,10,21.6], center=true);
-					rotate([-45,0,0]) cube([10,14,21.6], center=true);
-				}	
-			}
-			translate([0,0,-100/2]) cube(100, center=true);
-			}
-        translate([30,10,5]) rotate([90,0,0]) cylinder(h=13, r=6);
-		}
+            {
+                palmbody();
+                    for(i=[-3,-1,1,3]) translate([i*7,28,0]) 
+                        {
+                        translate([0,4.5,0]) {
+                            cube([10,10,21.6], center=true);
+                            rotate([-45,0,0]) cube([10,14,21.6], center=true);
+                        }	
+                    }
+                translate([0,0,-100/2]) cube(100, center=true);
+            }
+            translate([30,10,5]) rotate([90,0,0]) cylinder(h=13, r=6);
+        }
+    translate([-21,-2.5,25])
+    rotate([-10,0,0])
+    linear_extrude(height = 8, center = true)
+    text(size = 10 ,"comfab");
+    }
 }
 
 module palmbody()

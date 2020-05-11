@@ -35,4 +35,5 @@ module fingerbasecutout(width,x,z) {
 	translate([-13/z,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,width*x, 10]);
 }
 
-rotate([0,-90,0]) fingerbase(20,1.5,1.5,1.6,0.5,9.5);
+//fingerbase(20,1.5,1.5,1.6,0.5,9.5);
+fingerbase(20,1.5,1.5,1.6,0.5,9.5);
