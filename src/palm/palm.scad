@@ -15,7 +15,12 @@ module palm()
                     }
                 translate([0,0,-100/2]) cube(100, center=true);
             }
-            translate([30,10,5]) rotate([90,0,0]) cylinder(h=13, r=6);
+            translate([29,0,5])
+            union(){
+                cube([20,10,12],center=true);
+                translate([-10,0,0])
+                rotate([90,0,0]) cylinder(h=10, r=6, center=true);
+            }
         }
     translate([-21,-2.5,25])
     rotate([-10,0,0])
