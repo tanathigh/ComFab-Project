@@ -28,17 +28,26 @@ module thumbjoint(angle1,angle2){
     x=1.5;
     y=1.5;
     z=1.6;
-    //base object
-    thumbbase();
-    //rotate object
-    rotate([90,0,0])
-    //starting point t=0
-    translate([length*1.65,0,length*0.4])
-    //rotate
-    rotate([0,-angle1*$t,0])
-    //rotate point in the object
-    translate([-length/8,0,-length/2.5])
-    middlefinger(length,x,y,z,angle2);
+    
+    difference(){
+        union(){
+            //base object
+            thumbbase();
+            
+            //rotate object
+            rotate([90,0,0])
+            //starting point t=0
+            translate([length*1.65,0,length*0.4])
+            //rotate
+            rotate([0,-angle1*$t,0])
+            //rotate point in the object
+            translate([-length/8,0,-length/2.5])
+            middlefinger(length,x,y,z,angle2);
+        }
+        translate([length*1.65,-length*0.4,-length])
+        rotate([0,0,90])
+        cylinder(h=50,r=1);
+    }
 }
 
 thumbjoint(90,90);

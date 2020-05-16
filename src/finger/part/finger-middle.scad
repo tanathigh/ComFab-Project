@@ -9,13 +9,16 @@ module middlefinger(length,x,y,z,angle){
             
             //rotate object
             //starting point t=0
-            translate([length*1.4,0,length*0.4])
+            translate([length*1.38,0,length*0.4])
             //rotate
             rotate([0,angle*$t,0])
             //rotate axis in the object
             translate([-length/6,0,-length/2.5])
             fingertip(length,x,y,z,0.5,9.5);
         }
+        translate([length*1.34,length*1.5,length*0.4])
+        rotate([90,0,0])
+        cylinder(h=50,r=1);
     }
 }
 

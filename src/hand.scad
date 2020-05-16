@@ -39,17 +39,17 @@ module creat_hand(r,g,b){
     
     //4-finger
     color([r/255, g/255, b/255])
-    creat_finger(20,-2,-20,20,20);
+    creat_finger(20,-2,30,30,30);
     color([r/255, g/255, b/255])
-    creat_finger(23,26,0,20,20);
+    creat_finger(23,26,30,30,30);
     color([r/255, g/255, b/255])
-    creat_finger(20,54.3,20,20,20);
+    creat_finger(20,54.3,30,30,30);
     color([r/255, g/255, b/255])
-    creat_finger(18,82.5,40,20,20);
+    creat_finger(18,82.5,30,30,30);
 
     //thumb
     color([r/255, g/255, b/255])
-    creat_thumb(0,30,20,20);
+    creat_thumb(90,40,90,90);
 }
 
 creat_hand(236,188,180);
